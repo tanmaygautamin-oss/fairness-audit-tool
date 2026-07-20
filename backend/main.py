@@ -24,7 +24,7 @@ app = FastAPI(title="Bias/Fairness Audit Tool API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["*"],
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
