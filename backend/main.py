@@ -25,9 +25,9 @@ app = FastAPI(title="Bias/Fairness Audit Tool API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_methods=["GET", "POST"],
+    allow_methods=["GET", "POST", "OPTIONS", "PUT", "DELETE"],
     allow_credentials=True,
-    allow_headers=["*"]
+    allow_headers=["*"],
 )
 
 # Train once at startup, keep in memory -- avoids retraining on every request.
