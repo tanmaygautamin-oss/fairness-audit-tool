@@ -4,7 +4,7 @@
 
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://fairness-audit-tool.vercel.app/";
 
 export async function runAudit(sensitiveAttribute) {
     const response = await axios.post(`${BASE_URL}/api/audit`, {
