@@ -26,7 +26,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_methods=["GET", "POST"],
-    allow_headers=["*"],
+    allow_credentials=True,
+    allow_headers=["*"]
 )
 
 # Train once at startup, keep in memory -- avoids retraining on every request.
